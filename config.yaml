@@ -1,0 +1,13 @@
+urls:
+  home: "https://www.primeriti.es/"
+  search_template: "https://www.primeriti.es/search?s={query}&stype=text_box"
+
+selectors:
+  home: ".campaign-block"
+  search: ".campaign-listado"
+  ignore:
+    - ".campaign-block__countdown"
+
+search_keywords:
+  - "pantalon esqui"
+  - "calzoncillos calvin klein"
