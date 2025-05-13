@@ -36,10 +36,6 @@ session.mount("https://", HTTPAdapter(max_retries=retries))
 HASH_DIR = "hashes"
 os.makedirs(HASH_DIR, exist_ok=True)
 
-print(f"Token length: {len(BOT_TOKEN)}, type: {type(BOT_TOKEN)}")
-print(f"Chat ID length: {len(CHAT_ID)}, type: {type(CHAT_ID)}")
-
-
 
 def get_hash(content):
     return hashlib.md5(content.encode("utf-8")).hexdigest()
@@ -49,7 +45,6 @@ def send_telegram(message, chat_id, bot_token):
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
     payload = {"chat_id": chat_id, "text": message}
     response = requests.post(url, data=payload)
-    print(response)
     return response.text
 
 
