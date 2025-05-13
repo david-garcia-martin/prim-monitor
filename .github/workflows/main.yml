@@ -50,6 +50,6 @@ jobs:
         run: |
           git add -f hashes/
           git commit -m "Update hashes" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.PRIMERITI_TOKEN }}@github.com/david-garcia-martin/primeriti-monitor.git HEAD:main
+          git push https://x-access-token:${{ secrets.PRIMERITI_TOKEN }}@github.com/david-garcia-martin/prim-monitor.git HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.PRIMERITI_TOKEN }}
