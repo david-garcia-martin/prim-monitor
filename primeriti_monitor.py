@@ -120,7 +120,7 @@ def main():
         notify_msg = f"⚠️🔎⚠️Nuevos resultados para: '{keyword}'\n{search_url}"
         check_and_notify(identifier=f"search_{keyword.replace(' ', '_')}", url=search_url,
                          selector=SEARCH_SELECTOR, notify_message=notify_msg,
-                         ignore_if_contains='No hemos encontrado resultados para tu búsqueda')
+                         ignore_if_contains='No hemos encontrado resultados')
 
 
 if __name__ == "__main__":
